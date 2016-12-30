@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_manage"
+                style="@style/PersonItemLayoutStyle">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_startbaby"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="管理星号"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_message_push"
+                style="@style/PersonItemLayoutStyle">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_push"/>
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="消息推送"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_recent_reading"
+                style="@style/PersonItemLayoutStyle">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_history"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="最近阅读"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_download"
+                style="@style/PersonItemLayoutStyle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_offline"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="离线下载"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_activity"
+                style="@style/PersonItemLayoutStyle">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_activity"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="最新活动"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_sale"
+                style="@style/PersonItemLayoutStyle">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_sale"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="电商特卖"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+            <LinearLayout
+                android:id="@+id/person_item_setting"
+                style="@style/PersonItemLayoutStyle">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/defaultSize"
+                    android:src="@drawable/person_setting"/>
+
+                <TextView
+                    style="@style/PersonItemTextStyle"
+                    android:text="设置"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/defaultXSize"
+                    android:src="@drawable/person_next"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

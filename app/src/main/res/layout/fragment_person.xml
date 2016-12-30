@@ -1,13 +1,145 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.xiaofeng.startbaby.fragments.PersonFragment">
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaofeng.startbaby.fragments.PersonFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fitsSystemWindows="true"
+        android:background="@mipmap/ic_launcher"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@color/colorPrimary"
+            app:expandedTitleMarginEnd="48dp"
+            app:expandedTitleMarginStart="64dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:scrimVisibleHeightTrigger="100dp">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                >
+
+                <ImageView
+                    android:id="@+id/user_image_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/startbaby"/>
+            </android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/user_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/startbaby"/>
+
+                    <TextView
+                        android:id="@+id/person_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/username"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/defaultXSize">
+
+                    <LinearLayout
+                        android:id="@+id/person_collect"
+                        style="@style/PersonLayoutStyle"
+                        >
+
+                        <ImageView
+                            style="@style/PersonLayoutImage"
+                            android:src="@drawable/person_collection"/>
+
+                        <TextView
+                            style="@style/PersonLayoutText"
+                            android:text="我的收藏"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/person_message"
+                        style="@style/PersonLayoutStyle">
+
+                        <ImageView
+                            style="@style/PersonLayoutImage"
+                            android:src="@drawable/person_message"/>
+
+                        <TextView
+                            style="@style/PersonLayoutText"
+                            android:text="消息中心"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/person_feedback"
+                        style="@style/PersonLayoutStyle">
+
+                        <ImageView
+                            style="@style/PersonLayoutImage"
+                            android:src="@drawable/person_feedback"/>
+
+                        <TextView
+                            style="@style/PersonLayoutText"
+                            android:text="意见反馈"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/person_night_mode"
+                        style="@style/PersonLayoutStyle"
+                        >
+
+                        <ImageView
+                            style="@style/PersonLayoutImage"
+                            android:src="@drawable/person_day"
+                            android:id="@+id/imageView"/>
+
+                        <TextView
+                            style="@style/PersonLayoutText"
+                            android:text="夜间模式"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"/>
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-</FrameLayout>
+        <include
+            android:id="@+id/person_item"
+            layout="@layout/item_person"
+            />
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -21,4 +21,48 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+
+    <!--personFragment中的style-->
+    <!--头像下面四个守门的样式-->
+    <style name="PersonLayoutStyle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="PersonLayoutImage">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="PersonLayoutText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!--我的界面中下面字体的style； 比如：管理星号-->
+    <style name="PersonItemTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/defaultXSize</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="PersonItemLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/defaultMSize</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--登录注册需要的Stryle-->
+    <style name="LoginEditStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_marginLeft">@dimen/defaultXMSize</item>
+        <item name="android:layout_marginRight">@dimen/defaultXMSize</item>
+        <item name="android:padding">@dimen/defaultXSize</item>
+    </style>
 </resources>

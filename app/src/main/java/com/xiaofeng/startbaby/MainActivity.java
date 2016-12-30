@@ -1,11 +1,13 @@
 package com.xiaofeng.startbaby;
 
+import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
+
+import android.support.v7.widget.RecyclerView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -29,9 +31,10 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
     private RadioButton mRadioCommunity;
     private RadioButton mRadioPerson;
     private FragmentManager mFragmentManager;
-    private ViewPager mViewPager;
+
 
     private ArrayList<Fragment> mFragments;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,15 +43,17 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
         initView();
         initData();
         initListener();
+
     }
 
+
     private void initView() {
-        mViewPager = (ViewPager) findViewById(R.id.main_pager);
         mRadioGroup = (RadioGroup) findViewById(R.id.main_raoup);
         mRadioHome = (RadioButton) findViewById(R.id.main_radio_1);
         mRadioVideo = (RadioButton) findViewById(R.id.main_radio_2);
         mRadioCommunity = (RadioButton) findViewById(R.id.main_radio_3);
         mRadioPerson = (RadioButton) findViewById(R.id.main_radio_4);
+//        mRecyclerView = (RecyclerView) findViewById(R.id.person_recycler_view);
     }
 
     private void initListener() {
@@ -58,7 +63,7 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
     private void initData() {
         mFragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
-        transaction.add(R.id.main_pager, new HomeFragment());
+        transaction.add(R.id.main_frag, new HomeFragment());
         transaction.commit();
         setDrawable(R.drawable.home_2, R.id.main_radio_1, R.color.colorPrimary);
     }
@@ -68,7 +73,7 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
     public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
         FragmentTransaction transaction = mFragmentManager.beginTransaction();
         Fragment fragment = getInstanceByIndex(checkedId);
-        transaction.replace(R.id.main_pager, fragment);
+        transaction.replace(R.id.main_frag, fragment);
         transaction.commit();
     }
 
