@@ -1,6 +1,5 @@
 package com.xiaofeng.startbaby;
 
-import android.content.SharedPreferences;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,9 +15,9 @@ import com.xiaofeng.startbaby.fragments.CommunityFragment;
 import com.xiaofeng.startbaby.fragments.HomeFragment;
 import com.xiaofeng.startbaby.fragments.PersonFragment;
 import com.xiaofeng.startbaby.fragments.VideoFragment;
-import com.xiaofeng.startbaby.mvp.MainModel;
-import com.xiaofeng.startbaby.mvp.MainPresenter;
-import com.xiaofeng.startbaby.mvp.MainView;
+import com.xiaofeng.startbaby.mvp.model.MainModel;
+import com.xiaofeng.startbaby.mvp.prestener.MainPresenter;
+import com.xiaofeng.startbaby.mvp.view.MainView;
 import com.xiaofeng.startbaby.mvpouther.MvpActivity;
 
 import java.util.ArrayList;

@@ -8,72 +8,111 @@
     android:orientation="vertical"
     tools:context="com.xiaofeng.startbaby.ui.LoginActivity">
 
-
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/login_tool_bar"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/defaultXMSize"
+        android:background="@color/colorPrimaryO">
 
         <ImageView
+            android:id="@+id/login_go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/startbaby"/>
+            android:padding="@dimen/defaultSize"
+            android:src="@drawable/login_go_back"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/defaultXLSize"
-            android:layout_marginTop="@dimen/defaultXSize"
             android:gravity="center"
-            android:text="欢迎来到我们的世界！"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/defaultXXTextSize"
-            />
-
-        <EditText
-            style="@style/LoginEditStyle"
-            android:hint="@string/user_hint_name"
-            android:inputType="text"
-            />
-
-        <EditText
-            android:id="@+id/editText"
-            style="@style/LoginEditStyle"
-            android:hint="@string/user_hint_pass"
-            android:inputType="textPassword"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:layout_marginRight="@dimen/defaultXLSize"
             android:text="@string/login_name"/>
 
-        <Button
-            android:layout_width="wrap_content"
+    </android.support.v7.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/login_edit_user"
+        style="@style/LoginEditStyle"
+        android:background="@drawable/login_selector_bg"
+        android:hint="@string/user_hint_name"
+        android:inputType="text"
+        />
+
+    <EditText
+        android:id="@+id/login_edit_pass"
+        style="@style/LoginEditStyle"
+        android:background="@drawable/login_selector_bg"
+        android:hint="@string/user_hint_pass"
+        android:inputType="textPassword"/>
+
+    <Button
+        android:id="@+id/login_btn_login"
+        style="@style/LoginEditStyle"
+        android:layout_marginTop="@dimen/defaultXSize"
+        android:background="@color/loginFalse"
+        android:enabled="false"
+        android:text="@string/login_name"
+        android:textColor="@color/white"/>
+
+    <FrameLayout
+        style="@style/LoginEditStyle"
+        android:layout_marginTop="@dimen/defaultXSize"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:text="@string/register_name"/>
-    </LinearLayout>
+            android:gravity="center"
+            android:text="@string/thirdLogin"
+            android:textSize="@dimen/defaultXXSize"/>
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/defaultXSize"
+        android:gravity="center"
+        android:orientation="horizontal">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/comment_login_qq_icon"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/comment_login_weixin_icon"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/comment_login_weibo_icon"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/comment_login_xiaomi_icon"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/fastLogin"
+        android:layout_marginTop="@dimen/defaultXXSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+
 
 </LinearLayout>

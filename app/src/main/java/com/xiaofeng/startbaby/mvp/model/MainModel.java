@@ -1,4 +1,4 @@
-package com.xiaofeng.startbaby.mvp;
+package com.xiaofeng.startbaby.mvp.model;
 
 /**
  * Created by Administrator on 2016/12/26 0026.

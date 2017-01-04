@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <!--没有标题栏的主题-->
     <color name="colorPrimary">#FF41ACE4</color>
     <color name="colorPrimaryDark">#1a9bdf</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FF41ACE4</color>
+
+    <!--有标题栏的主题-->
+    <color name="colorPrimaryO">#dce0e2</color>
+    <color name="colorPrimaryDarkO">#dce0e2</color>
+    <color name="colorAccentO">#FF41ACE4</color>
 
 
+    <!--有关登录注册按钮的颜色-->
+    <color name="loginFalse">#87cbef</color>
+    <color name="loginTrue">#FF41ACE4</color>
 
     <color name="white">#fff</color>
     <color name="black">#000</color>

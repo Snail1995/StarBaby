@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/activity_register"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.xiaofeng.startbaby.ui.RegisterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/register_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="@dimen/defaultXMSize"
+        android:background="@color/colorPrimaryO">
+
+        <ImageView
+            android:id="@+id/register_go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/defaultSize"
+            android:src="@drawable/login_go_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/number_register"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            style="@style/LayoutRegister">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="+86"/>
+
+            <EditText
+                android:id="@+id/register_user_number"
+                style="@style/LayoutRegisterEdit"
+                android:hint="请填写手机号码"
+                android:inputType="number"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LayoutRegister">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="密码"/>
+
+            <EditText
+                android:id="@+id/register_user_pass"
+                style="@style/LayoutRegisterEdit"
+                android:hint="请填写手机密码"
+                android:inputType="textPassword"/>
+
+            <ImageView
+                android:id="@+id/register_eye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LayoutRegister">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="验证码"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/register_identify_code"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:textSize="@dimen/defaultXSize"/>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/defaultSize"
+                    android:src="@drawable/pic_placeholder"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/register_refresh"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="换一下"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:id="@+id/textView"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/register_btn"
+            style="@style/LoginEditStyle"
+            android:layout_marginTop="@dimen/defaultXXXSize"
+            android:background="@color/colorPrimary"
+            android:text="注册"/>
+
+        <TextView
+            android:id="@+id/fastRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/defaultXXSize"
+            android:gravity="center"
+            android:textSize="@dimen/defaultTextSize"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+</LinearLayout>
