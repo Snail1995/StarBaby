@@ -1,18 +1,30 @@
 package com.xiaofeng.startbaby.fragments;
 
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.githang.statusbar.StatusBarCompat;
 import com.xiaofeng.startbaby.R;
 import com.xiaofeng.startbaby.base.BaseFragment;
 
 public class VideoFragment extends BaseFragment {
 
 
+    private Activity mActivity;
+
     public VideoFragment() {
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mActivity = getActivity();
+        StatusBarCompat.setStatusBarColor(mActivity, getMyColor(R.color.colorPrimary), false);
     }
 
     @Override
@@ -21,4 +33,9 @@ public class VideoFragment extends BaseFragment {
 
         return ret;
     }
+
+    private int getMyColor(int id) {
+        return getResources().getColor(id);
+    }
+
 }

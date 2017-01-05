@@ -32,9 +32,17 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        mRegisterAgreenment.setText(Html.fromHtml("<font color=\'#858585\'> " + "点击“注册”按钮，即代表你同意" + "</font>" +
-                "<a href='http://www.baidu.com'>" + "《星baby使用协议》"
-                + "</a>"));
+
+        String str = "点击“注册”按钮，即代表你同意《星baby使用协议》";
+        SpannableString ss = new SpannableString(str);
+        ss.setSpan(new ClickableSpan() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this, ArgeenMentActivity.class));
+            }
+        }, 15, str.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //SPAN_EXCLUSIVE_EXCLUSIVE从字符串0-text1.length任意位置触发点击事件
+
+        mRegisterAgreenment.setText(ss);
         // 必须有这句话，否则链接都将不会起作用
         mRegisterAgreenment.setMovementMethod(LinkMovementMethod.getInstance());
     }

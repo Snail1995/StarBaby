@@ -90,7 +90,7 @@
 
     <style name="LayoutRegisterEdit">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_weight">7</item>
+        <item name="android:layout_weight">8</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@null</item>
         <item name="android:padding">@dimen/defaultXSize</item>

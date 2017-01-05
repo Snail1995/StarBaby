@@ -51,11 +51,13 @@
             <LinearLayout
                 android:id="@+id/person_item_message_push"
                 style="@style/PersonItemLayoutStyle">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/defaultSize"
                     android:src="@drawable/person_push"/>
+
                 <TextView
                     style="@style/PersonItemTextStyle"
                     android:text="消息推送"/>
@@ -201,11 +203,6 @@
                     android:src="@drawable/person_next"/>
 
             </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/gray"/>
 
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>

@@ -21,10 +21,15 @@
         </activity>
         <activity
             android:name=".ui.RegisterActivity"
-            android:theme="@style/OrdinaryTheme"
-            >
+            android:theme="@style/OrdinaryTheme">
         </activity>
         <activity android:name=".ui.PersonDetailsActivity">
+        </activity>
+        <activity
+            android:name=".ui.Register2Activity"
+            android:theme="@style/OrdinaryTheme">
+        </activity>
+        <activity android:name=".ui.ArgeenMentActivity">
         </activity>
     </application>
 
