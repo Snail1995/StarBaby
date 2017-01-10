@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.githang.statusbar.StatusBarCompat;
 import com.xiaofeng.startbaby.R;
 import com.xiaofeng.startbaby.base.BaseFragment;
+import com.xiaofeng.startbaby.mvpouther.BasePresenter;
+import com.xiaofeng.startbaby.mvpouther.MvpFragment;
 import com.xiaofeng.startbaby.util.MenuBean;
 import com.xiaofeng.startbaby.view.TabAdapter;
 import com.xiaofeng.startbaby.view.VerticalTabLayout;
@@ -30,7 +32,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class CommunityFragment extends BaseFragment {
+public class CommunityFragment extends MvpFragment {
 
     private Activity mActivity;
     private VerticalTabLayout mTabLayout;
@@ -68,6 +70,11 @@ public class CommunityFragment extends BaseFragment {
 
     private int getMyColor(int id) {
         return getResources().getColor(id);
+    }
+
+    @Override
+    protected BasePresenter createPresenter() {
+        return null;
     }
 
     class MyPagerAdapter extends PagerAdapter implements TabAdapter {

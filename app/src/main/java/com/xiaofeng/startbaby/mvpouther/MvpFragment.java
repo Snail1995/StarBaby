@@ -13,11 +13,12 @@ import com.xiaofeng.startbaby.base.BaseFragment;
 public abstract class MvpFragment<P extends BasePresenter> extends BaseFragment {
     protected P mvpPresenter;
 
-        @Override
-        public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-            super.onViewCreated(view, savedInstanceState);
-            mvpPresenter = createPresenter();
-        }
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        mvpPresenter = createPresenter();
+    }
+
     protected abstract P createPresenter();
 
     @Override

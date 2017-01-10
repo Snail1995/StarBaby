@@ -42,7 +42,6 @@ public class MainActivity extends MvpActivity<MainPresenter> implements MainView
         initView();
         initData();
         initListener();
-
     }
 
 
