@@ -63,7 +63,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View ret = inflater.inflate(R.layout.fragment_home, container, false);
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(getActivity());
         initView(ret);
         initData();
         initListener();
@@ -124,6 +124,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        EventBus.getDefault().unregister(this);
+//        EventBus.getDefault().unregister(this);
     }
 }
