@@ -3,11 +3,18 @@ package com.xiaofeng.startbaby.util;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
+import com.xiaofeng.startbaby.interfaces.OnMoveAndSwipedListener;
+
 /**
  * 首页中RecycleView的拖拽排序事件
  */
 public class HomeRecyTouchHelperCallback extends ItemTouchHelper.Callback {
 
+    private OnMoveAndSwipedListener mAdapter;
+
+    public HomeRecyTouchHelperCallback(OnMoveAndSwipedListener adapter) {
+        this.mAdapter = adapter;
+    }
 
     /**
      * 拖动与侧滑的方向
@@ -40,7 +47,7 @@ public class HomeRecyTouchHelperCallback extends ItemTouchHelper.Callback {
         if (viewHolder.getItemViewType() != target.getItemViewType()) {
             return false;
         }
-//        mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
+        mAdapter.onItemMove(viewHolder.getAdapterPosition(), target.getAdapterPosition());
         return true;
     }
 
