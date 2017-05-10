@@ -9,13 +9,15 @@
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        android:background="@color/white">
+        android:background="@color/colorPrimary">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="搜索框"/>
+            android:text="社区"
+            android:textColor="@color/white"
+            android:textSize="@dimen/defaultXXTextSize"/>
 
     </android.support.v7.widget.Toolbar>
 

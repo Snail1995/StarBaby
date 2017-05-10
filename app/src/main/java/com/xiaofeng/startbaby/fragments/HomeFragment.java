@@ -90,8 +90,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         for (int i = 0; i < 2; i++) {
             mFrgments.add(new HomeRecommendFragment());
             mFrgments.add(new HomeEssenceFragment());
-            mFrgments.add(new HomeTrainFragment());
             mFrgments.add(new HomeExChangeFragment());
+            mFrgments.add(new HomeTrainFragment());
         }
         mViewPagerAdapter.notifyDataSetChanged();
     }

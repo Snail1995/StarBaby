@@ -33,7 +33,7 @@ public abstract class LazyLoadFragment extends Fragment {
         view = inflater.inflate(setContentView(), container, false);
         isInit = true;
         /**初始化的时候去加载数据**/
-        isCanLoadData();
+        isCanLoadData(view);
         return this.view;
     }
 
@@ -43,7 +43,7 @@ public abstract class LazyLoadFragment extends Fragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        isCanLoadData();
+        isCanLoadData(view);
     }
 
     /**
@@ -52,13 +52,13 @@ public abstract class LazyLoadFragment extends Fragment {
      * 1.视图已经初始化
      * 2.视图对用户可见
      */
-    private void isCanLoadData() {
+    private void isCanLoadData(View view) {
         if (!isInit) {
             return;
         }
 
         if (getUserVisibleHint()) {
-            lazyLoad();
+            lazyLoad(view);
             isLoad = true;
         } else {
             if (isLoad) {
@@ -116,7 +116,7 @@ public abstract class LazyLoadFragment extends Fragment {
     /**
      * 当视图初始化并且对用户可见的时候去真正的加载数据
      */
-    protected abstract void lazyLoad();
+    protected abstract void lazyLoad(View view);
 
     /**
      * 当视图已经对用户不可见并且加载过数据，如果需要在切换到其他页面时停止加载数据，可以调用此方法

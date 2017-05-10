@@ -20,5 +20,6 @@
 
     <!--home fragment string-->
     <string name="home_search_string">请输入您感兴趣的资讯</string>
+    <string name="video_string">视频</string>
 
 </resources>

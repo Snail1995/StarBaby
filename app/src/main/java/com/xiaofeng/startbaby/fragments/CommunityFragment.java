@@ -45,7 +45,7 @@ public class CommunityFragment extends MvpFragment {
         super.onCreate(savedInstanceState);
         mActivity = getActivity();
         // 修改StateBar的状态栏颜色
-        StatusBarCompat.setStatusBarColor(mActivity, getMyColor(R.color.white), true);
+        StatusBarCompat.setStatusBarColor(mActivity, getMyColor(R.color.colorPrimary), false);
     }
 
     @Override
