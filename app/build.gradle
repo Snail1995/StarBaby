@@ -29,5 +29,4 @@ dependencies {
     compile 'com.githang:status-bar-compat:0.3'
     compile 'com.android.support:support-v4:24.2.1'
     testCompile 'junit:junit:4.12'
-    compile 'org.greenrobot:eventbus:3.0.0'
 }

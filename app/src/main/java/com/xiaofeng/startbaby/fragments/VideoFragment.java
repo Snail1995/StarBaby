@@ -4,15 +4,15 @@ package com.xiaofeng.startbaby.fragments;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.githang.statusbar.StatusBarCompat;
 import com.xiaofeng.startbaby.R;
-import com.xiaofeng.startbaby.base.BaseFragment;
 
-public class VideoFragment extends BaseFragment {
+public class VideoFragment extends Fragment {
 
 
     private Activity mActivity;

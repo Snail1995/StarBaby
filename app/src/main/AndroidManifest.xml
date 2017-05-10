@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.xiaofeng.startbaby"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.xiaofeng.startbaby">
 
     <application
-        android:name=".app.StartBabyApplication"
+        android:name=".StartBabyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,6 +31,8 @@
             android:theme="@style/OrdinaryTheme">
         </activity>
         <activity android:name=".ui.ArgeenMentActivity">
+        </activity>
+        <activity android:name=".ui.HomeSearchActivity">
         </activity>
     </application>
 

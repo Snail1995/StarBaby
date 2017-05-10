@@ -2,7 +2,6 @@ package com.xiaofeng.startbaby.fragments;
 
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,7 +16,6 @@ import android.widget.TextView;
 
 import com.githang.statusbar.StatusBarCompat;
 import com.xiaofeng.startbaby.R;
-import com.xiaofeng.startbaby.base.BaseFragment;
 import com.xiaofeng.startbaby.mvpouther.BasePresenter;
 import com.xiaofeng.startbaby.mvpouther.MvpFragment;
 import com.xiaofeng.startbaby.util.MenuBean;

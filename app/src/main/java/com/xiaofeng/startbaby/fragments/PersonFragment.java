@@ -6,16 +6,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.githang.statusbar.StatusBarCompat;
 import com.xiaofeng.startbaby.R;
-import com.xiaofeng.startbaby.base.BaseFragment;
 import com.xiaofeng.startbaby.ui.LoginActivity;
 import com.xiaofeng.startbaby.ui.PersonDetailsActivity;
 import com.xiaofeng.startbaby.util.ConstantUtils;
@@ -23,7 +20,7 @@ import com.xiaofeng.startbaby.util.ConstantUtils;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class PersonFragment extends BaseFragment implements View.OnClickListener {
+public class PersonFragment extends Fragment implements View.OnClickListener {
 
 
     private View mUserPic;

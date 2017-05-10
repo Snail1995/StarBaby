@@ -1,4 +1,4 @@
-package com.xiaofeng.startbaby.app;
+package com.xiaofeng.startbaby;
 
 import android.app.Application;
 
@@ -7,6 +7,9 @@ import android.app.Application;
  */
 
 public class StartBabyApplication extends Application {
+    public static final String[] FRAGMENT_TITLR_STRING = {"推荐", "精华", "训练", "交流"};
+
+
     @Override
     public void onCreate() {
         super.onCreate();

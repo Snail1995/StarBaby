@@ -17,4 +17,8 @@
     <string name="fast_register">快速注册</string>
     <string name="thirdLogin">第三方登录</string>
     <string name="number_register">手机号注册</string>
+
+    <!--home fragment string-->
+    <string name="home_search_string">请输入您感兴趣的资讯</string>
+
 </resources>
