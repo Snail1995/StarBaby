@@ -1,6 +1,7 @@
 package com.xiaofeng.startbaby.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +12,8 @@ import com.xiaofeng.startbaby.R;
 import com.xiaofeng.startbaby.adapter.base.BaseRecyclerAdapter;
 import com.xiaofeng.startbaby.adapter.base.CommonHolder;
 import com.xiaofeng.startbaby.model.Photo;
+import com.xiaofeng.startbaby.ui.ArgeenMentActivity;
+import com.xiaofeng.startbaby.ui.RegisterActivity;
 import com.xiaofeng.startbaby.util.ToastUtil;
 
 import butterknife.Bind;
@@ -46,7 +49,8 @@ public class PhotoAdapter extends BaseRecyclerAdapter<Photo> {
                 @Override
                 public void onClick(View view) {
                     //点击事件
-                    ToastUtil.show("item clicked!");
+                    Intent intent = new Intent(getContext(), ArgeenMentActivity.class);
+                    getContext().startActivity(intent);
                 }
             });
         }

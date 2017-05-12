@@ -23,7 +23,12 @@ public class ArgeenMentActivity extends AppCompatActivity {
         mWebView = (WebView) findViewById(R.id.argeenment);
         WebSettings settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);
-        mUrl = "file:///android_asset/agreenment.html";
+        int count = getIntent().getIntExtra("count", 2);
+        if (count == 1) {
+            mUrl = "file:///android_asset/agreenment.html";
+        } else {
+            mUrl = "file:///android_asset/homeHtml.html";
+        }
         mWebView.loadUrl(mUrl);
         mWebView.setWebViewClient(new WebViewClient() {
             @Override

@@ -4,6 +4,7 @@ package com.xiaofeng.startbaby.fragments.community;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -54,12 +55,13 @@ public class TrianFragment extends Fragment {
 
     private void initData() {
         mAdapter = new RecyclerViewAdapter(mInfos, getContext());
+        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecycler.setAdapter(mAdapter);
     }
 
 
     private void initView(View ret) {
-        mRecycler = (RecyclerView) ret.findViewById(R.id.follow_recycler_view);
+        mRecycler = (RecyclerView) ret.findViewById(R.id.train_recycler_view);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)

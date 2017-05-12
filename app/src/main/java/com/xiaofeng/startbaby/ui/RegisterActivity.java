@@ -38,7 +38,9 @@ public class RegisterActivity extends AppCompatActivity {
         ss.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(RegisterActivity.this, ArgeenMentActivity.class));
+                Intent intent = new Intent(RegisterActivity.this, ArgeenMentActivity.class);
+                intent.putExtra("count", 1);
+                startActivity(intent);
             }
         }, 15, str.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //SPAN_EXCLUSIVE_EXCLUSIVE从字符串0-text1.length任意位置触发点击事件
 

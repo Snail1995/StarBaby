@@ -4,6 +4,7 @@ package com.xiaofeng.startbaby.fragments.community;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -48,7 +49,7 @@ public class ExChangeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View ret = inflater.inflate(R.layout.fragment_follow, container, false);
+        View ret = inflater.inflate(R.layout.fragment_ex_change, container, false);
         initView(ret);
         initData();
         return ret;
@@ -56,17 +57,18 @@ public class ExChangeFragment extends Fragment {
 
     private void initData() {
         mAdapter = new RecyclerViewAdapter(mInfos, getContext());
+        mRecycler.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecycler.setAdapter(mAdapter);
     }
 
 
     private void initView(View ret) {
-        mRecycler = (RecyclerView) ret.findViewById(R.id.follow_recycler_view);
+        mRecycler = (RecyclerView) ret.findViewById(R.id.exchange_recycler_view);
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(CommunityInfo info) {
-        mInfos = info.getList().get(3).getBoard_list();
+        mInfos = info.getList().get(1).getBoard_list();
         mAdapter.notifyDataSetChanged();
         String img = mInfos.get(3).getBoard_img();
         Log.d("TAG", "onEvent: " + img);

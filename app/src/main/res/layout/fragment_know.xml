@@ -5,7 +5,8 @@
              tools:context="com.xiaofeng.startbaby.fragments.community.KnowFragment">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/follow_recycler_view"
+        android:overScrollMode="never"
+        android:id="@+id/know_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </FrameLayout>

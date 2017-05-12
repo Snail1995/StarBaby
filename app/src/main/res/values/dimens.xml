@@ -7,8 +7,8 @@
 
     <dimen name="defaultMSize">3dp</dimen>
     <dimen name="defaultSize">5dp</dimen>
-    <dimen name="defaultXSize">10dp</dimen>
-    <dimen name="defaultXXSize">15dp</dimen>
+        <dimen name="defaultXSize">10dp</dimen>
+    <dimen name="defaultXXSize">14dp</dimen>
     <dimen name="defaultXXXSize">20dp</dimen>
     <dimen name="defaultXMSize">30dp</dimen>
     <dimen name="defaultXLSize">50dp</dimen>

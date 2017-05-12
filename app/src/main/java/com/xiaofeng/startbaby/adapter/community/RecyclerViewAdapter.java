@@ -1,6 +1,7 @@
 package com.xiaofeng.startbaby.adapter.community;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.xiaofeng.startbaby.R;
 import com.xiaofeng.startbaby.model.CommunityInfo;
+import com.xiaofeng.startbaby.ui.WebViewActivity;
 
 import java.util.List;
 
@@ -31,6 +33,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public RecyclerViewAdapter(List<CommunityInfo.CommunityInfoImpl> communityInfos, Context context) {
         mCommunityInfos = communityInfos;
         mContext = context;
+        Log.d(TAG, "RecyclerViewAdapter: " + mCommunityInfos.size());
     }
 
     @Override
@@ -45,10 +48,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         CommunityInfo.CommunityInfoImpl info = mCommunityInfos.get(position);
         Glide.with(mContext)
                 .load(info.getBoard_img())
-                .centerCrop()
-                .error(R.mipmap.ic_launcher)
+                .error(R.drawable.dz_icon_big_default)
                 .into(holder.mImage);
-        holder.mCount.setText(info.getFavNum());
+        holder.mCount.setText(Integer.toString(info.getFavNum()));
         holder.mTitle.setText(info.getBoard_name());
         Log.d(TAG, "onBindViewHolder: " + info.getBoard_img());
     }
@@ -64,7 +66,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private final TextView mTitle;
         private final TextView mCount;
 
-        public ViewHolder(View itemView) {
+        public ViewHolder(final View itemView) {
             super(itemView);
             mImage = (ImageView) itemView.findViewById(R.id.item_commend_image);
             mTitle = ((TextView) itemView.findViewById(R.id.item_commend_title));
@@ -73,6 +75,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 @Override
                 public void onClick(View v) {
                     // TODO： 点击跳入新的Activity，
+                    mContext.startActivity(new Intent(mContext, WebViewActivity.class));
                 }
             });
         }

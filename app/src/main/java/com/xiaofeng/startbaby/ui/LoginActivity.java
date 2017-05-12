@@ -62,7 +62,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
         ss.setSpan(new ClickableSpan() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+                startActivity(new Intent(LoginActivity.this, Register2Activity.class));
             }
         }, 6, 10, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //SPAN_EXCLUSIVE_EXCLUSIVE从字符串0-text1.length任意位置触发点击事件
 
