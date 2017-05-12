@@ -9,6 +9,10 @@
         <item name="toolbarStyle">@style/contentInsetStartStyle</item>
     </style>
 
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@drawable/guide</item>
+    </style>
+
     <style name="contentInsetStartStyle" parent="Widget.AppCompat.Toolbar">
         <item name="contentInsetStart">0dp</item>
     </style>

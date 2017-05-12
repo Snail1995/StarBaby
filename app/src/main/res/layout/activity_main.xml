@@ -32,6 +32,8 @@
             style="@style/MainRadioStyle"
             android:drawableTop="@drawable/home"
             android:gravity="center"
+            android:button="@null"
+            android:overScrollMode="never"
             android:text="首页"
             />
 

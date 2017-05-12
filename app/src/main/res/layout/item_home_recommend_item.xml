@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="@dimen/defaultSize">
+
+    <ImageView
+        android:id="@+id/item_commend_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/defaultMSize"
+        android:src="@mipmap/ic_launcher"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/defaultSize"
+        android:layout_toRightOf="@id/item_commend_image"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/item_commend_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语言训练"/>
+
+        <ImageView
+            android:id="@+id/item_commend_image_person"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@id/item_commend_title"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/item_commend_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_commend_title"
+            android:layout_marginLeft="@dimen/defaultSize"
+            android:layout_toRightOf="@id/item_commend_image_person"
+            android:text="300"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="@dimen/defaultXSize"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/defaultSize"
+        android:text="专注"
+        android:textColor="@color/white"
+        android:textSize="@dimen/defaultXXTextSize"/>
+
+</LinearLayout>

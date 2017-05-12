@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.xiaofeng.startbaby">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".StartBabyApplication"
         android:allowBackup="true"
@@ -33,6 +34,14 @@
         <activity android:name=".ui.ArgeenMentActivity">
         </activity>
         <activity android:name=".ui.HomeSearchActivity">
+        </activity>
+        <activity android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN"/>-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+            <!--</intent-filter>-->
         </activity>
     </application>
 

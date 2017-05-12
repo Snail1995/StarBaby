@@ -19,4 +19,7 @@
     <color name="white">#fff</color>
     <color name="black">#000</color>
     <color name="gray">#e2e1e1</color>
+
+    <!---->
+    <color name="comment_bg">#ccc</color>
 </resources>

@@ -1,1 +1,5 @@
 首页数据接口：http://www.tngou.net/api/lore/list
+
+社区接口： http://gd.kuaisulu.com/mobcent/app/web/index.php?r=forum/forumlist
+
+子界面接口： http://gd.kuaisulu.com/mobcent/app/web/index.php?r=forum/topiclist
